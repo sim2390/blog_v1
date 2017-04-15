@@ -12,12 +12,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
-
   <header id="main_navigation" class="clearfix">
-    <a href="index.html" class="name">SIM2390</a>
+    <%= link_to "SIM2390", root_path, class: "name" %>
     <nav>
       <%= link_to "Articles", posts_path %>
       <a href="project.html">Projects</a>
@@ -25,5 +21,19 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy; sim2390</p>
+    <nav>
+      <a href="https://soundcloud.com/simdj" target="_blank"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/simdj/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://google.com" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+
+    </nav>
+  </footer>
 
 </html>

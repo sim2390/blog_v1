@@ -1,0 +1,30 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+          <p>Disrupt ennui hella plaid. Cardigan af meditation pitchfork, banjo church-key fixie waistcoat pork belly hashtag hexagon small batch fashion axe. Street art whatever quinoa hoodie. Glossier green juice franzen beard tofu pickled before they sold out trust fund, gochujang sartorial four dollar toast activated charcoal. Literally raclette helvetica actually, plaid typewriter live-edge meh jean shorts 8-bit. Bicycle rights artisan hot chicken af narwhal. Hexagon meditation tote bag, slow-carb normcore yr iceland ennui fanny pack actually lo-fi. <a href="#">dessstaa</a> desktop.
+          </p>
+          <p>Trust fund +1 tbh quinoa selfies, sartorial forage cardigan intelligentsia seitan gentrify. Yuccie celiac 8-bit, DIY mustache leggings tacos banh mi butcher mumblecore single-origin coffee. IPhone kinfolk authentic, vinyl gentrify you probably haven't heard of them flexitarian ethical. Mlkshk organic microdosing, cold-pressed woke freegan brooklyn raw denim austin twee. La croix artisan dreamcatcher hammock church-key ramps, viral authentic mumblecore pabst single-origin coffee pickled bespoke chambray. Artisan seitan ramps, unicorn messenger bag scenester waistcoat wolf affogato ennui. Asymmetrical portland DIY chia shabby chic.
+          </p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Stuff</h2>
+    <hr>
+
+    <%= @posts.each do |post| %>
+      <h3><a href=""><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+  </div>
+
+  <div class="col-3 homepage_content">
+    <h2>Delo</h2>
+    <hr>
+    <h3><a href="">Redsszt</a></h3>
+    <p class="date">Friday 13, April</p>
+    <h3><a href="">Haaka</a></h3>
+    <p class="date">Friday 13, April</p>
+    <h3><a href="">Khakii</a></h3>
+    <p class="date">Friday 13, April</p>
+</div>
+</div>
