@@ -13,7 +13,7 @@
   </head>
 
   <header id="main_navigation" class="clearfix">
-    <%= link_to "SIM2390", root_path, class: "name" %>
+    <%= link_to "SIM2390", root_path, class: "name" %> 
     <nav>
       <%= link_to "Articles", posts_path %>
       <%= link_to "Projects", projects_path %>
@@ -22,9 +22,13 @@
     </nav>
   </header>
 
-  <body>
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
     <%= yield %>
-  </body>
 
   <footer id="main_footer">
     <p class="copyright">&copy; sim2390</p>
