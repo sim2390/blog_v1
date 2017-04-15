@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>SIM2390</title>
     <%= csrf_meta_tags %>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/6c8ce02979.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,4 +15,15 @@
   <body>
     <%= yield %>
   </body>
+
+  <header id="main_navigation" class="clearfix">
+    <a href="index.html" class="name">SIM2390</a>
+    <nav>
+      <%= link_to "Articles", posts_path %>
+      <a href="project.html">Projects</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
 </html>
