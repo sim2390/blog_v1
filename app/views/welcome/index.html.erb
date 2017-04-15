@@ -8,7 +8,7 @@
           </p>
   </div>
   <div class="col-2 homepage_content">
-    <h2>Stuff</h2>
+    <h2>Articles</h2>
     <hr>
 
     <% @posts.each do |post| %>
@@ -19,13 +19,13 @@
   </div>
 
   <div class="col-3 homepage_content">
-    <h2>Delo</h2>
+    <h2>Projects</h2>
     <hr>
-    <h3><a href="">Redsszt</a></h3>
-    <p class="date">Friday 13, April</p>
-    <h3><a href="">Haaka</a></h3>
-    <p class="date">Friday 13, April</p>
-    <h3><a href="">Khakii</a></h3>
-    <p class="date">Friday 13, April</p>
+
+    <% @projects.each do |project| %>
+      <h3><a href=""><%= link_to project.title, project %></a></h3>
+      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+
 </div>
 </div>
