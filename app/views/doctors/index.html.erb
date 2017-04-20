@@ -1,0 +1,18 @@
+<h1 id="page_title"> List of Doctors </h1>
+
+<div id="post_wrapper" class="skinny_wrapper">
+
+  <% @doctors.each do |doctor| %>
+  <div class="post">
+    <p class="date"><%= doctor.created_at.strftime("%A, %B %d")%></p>
+    <h2><a href="#"><%= link_to doctor.name + " " + doctor.surname, doctor%></a></h2>
+
+
+
+    <hr>
+  </div>
+  <% end %>
+
+</div>
+
+<br>

@@ -1,0 +1,49 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+
+  <header>
+    <p class="date"> <%= @doctor.created_at.strftime("%A, %B %d") %> </p>
+    <h1><%= @doctor.name + " " + @doctor.surname %></h1>
+    <br>
+
+
+  </header>
+
+  <div id="content">
+        <%= image_tag @doctor.avatar.url %>
+
+  <h2>  <%= @doctor.doctor_type %> <br>  </h2>
+    <%= @doctor.specialization %> <br>
+    <%= @doctor.location %> <br>
+    <%= @doctor.email %> <br>
+    <%= @doctor.phone_number %> <br>
+    <%= @doctor.fax_number %> <br>
+    <%= @doctor.web_site %> <br>
+    <%= @doctor.optional_info %> <br>
+
+    <br>
+
+
+
+    <br>
+
+    <div class="button_wrapper">
+      <a href="<%= @doctor.web_site %>" class="project_button" target="_blank">Visit <%= @doctor.name %></a>
+    </div>
+
+    <div id="admin_links">
+        <%= link_to "Edit Doctor", edit_doctor_path(@doctor) %>
+        <%= link_to "Delete Doctor", doctor_path(@doctor), method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+
+    <!--  <% if user_signed_in? %>  -->
+    <!--  <% end %>  -->
+
+  </div>
+
+    <%= render "disqus" %>
+
+  </div>
+
+
+  </div>
+</div>

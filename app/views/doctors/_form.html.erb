@@ -1,0 +1,43 @@
+<%= form_for @doctor do |f| %>
+
+  <% if @doctor.errors.any? %>
+    <h2><%= pluralize(@doctor.errors.count, "error") %></h2>
+    <ul>
+      <% @doctor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :surname %>
+  <%= f.text_field :surname %><br>
+  <%= f.label :tip %>
+  <%= f.select :doctor_type, options_for_select([['Zdravnik'] , ['Zobozdravnik']]) %> <br> <br>
+  <%= f.label :photo  %> <%= f.file_field :avatar %>  <br>
+  <br>
+
+  <%= f.label :specialization %>
+  <%= f.text_field :specialization %><br>
+  <%= f.label :location %>
+  <%= f.text_field :location %><br>
+  <%= f.label :email %>
+  <%= f.email_field :email %><br>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %><br>
+  <%= f.label :fax_number %>
+  <%= f.text_field :fax_number %><br>
+  <%= f.label :web_site %>
+  <%= f.text_field :web_site %><br>
+  <%= f.label :optional_info %>
+  <%= f.text_area :optional_info %><br>
+
+
+
+  <br>
+  <br>
+
+  <%= f.submit %>
+
+<% end %>

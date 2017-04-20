@@ -19,12 +19,12 @@
   </div>
 
   <div class="col-3 homepage_content">
-    <h2>Projects</h2>
+    <h2>Doctors</h2>
     <hr>
 
-    <% @projects.each do |project| %>
-      <h3><a href=""><%= link_to project.title, project %></a></h3>
-      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% @doctors.each do |doctor| %>
+      <h3><a href=""><%= link_to doctor.name + " " + doctor.surname, doctor %></a></h3>
+      <p class="date"><%= doctor.created_at.strftime("%A, %b %d") %></p>
     <% end %>
 
 </div>
